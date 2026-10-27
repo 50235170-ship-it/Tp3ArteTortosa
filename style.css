@@ -1,0 +1,326 @@
+
+/* CONFIGURACION GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0c0b18;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.padding-lados {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.subtitulo {
+    color: #b49aff;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* HEADER */
+header {
+    background-color: #0c0b18;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-brand span {
+    color: #a987ff;
+}
+
+.nav-link {
+    color: white;
+    margin-left: 18px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #b49aff;
+}
+
+/* SECCION PRINCIPAL */
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background:
+        linear-gradient(100deg, #17102f 10%, #4a1e83 60%, #15102b 100%);
+    overflow: hidden;
+}
+
+.hero-contenido {
+    max-width: 650px;
+    animation: aparecer 1s ease;
+}
+
+.etiqueta {
+    color: #c7b2ff;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 9vw, 100px);
+    font-weight: 900;
+    line-height: 0.95;
+    margin: 25px 0;
+}
+
+.hero h1 span {
+    color: #a987ff;
+}
+
+.descripcion {
+    color: #d5cfe8;
+    max-width: 450px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* BOTONES */
+.boton {
+    display: inline-block;
+    background: linear-gradient(90deg, #7041e8, #a987ff);
+    color: white;
+    text-decoration: none;
+    padding: 15px 24px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.boton:hover {
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px #7041e866;
+}
+
+/* SECCION DEL EVENTO */
+.evento {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.evento h2,
+.artistas h2 {
+    margin-top: 15px;
+}
+
+.tarjeta {
+    height: 100%;
+    padding: 30px;
+    background-color: #19172b;
+    border: 1px solid #302749;
+    border-radius: 14px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    border-color: #a987ff;
+}
+
+.icono {
+    font-size: 38px;
+    color: #a987ff;
+    margin-bottom: 20px;
+}
+
+.tarjeta h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.tarjeta p {
+    color: #bcb7cc;
+    line-height: 1.7;
+}
+
+/* SECCION DE ARTISTAS */
+.artistas {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    background: linear-gradient(180deg, #121022, #211438);
+}
+
+.artista {
+    min-height: 280px;
+    padding: 25px;
+    display: flex;
+    align-items: end;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.artista:hover {
+    transform: scale(1.03);
+}
+
+.artista p {
+    color: #d0bdff;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.artista h3 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.artista-uno {
+    background: linear-gradient(145deg, #7336a8, #20132f);
+}
+
+.artista-dos {
+    background: linear-gradient(145deg, #d64e79, #30152e);
+}
+
+.artista-tres {
+    background: linear-gradient(145deg, #276e9c, #151b3b);
+}
+
+/* SECCION DE ENTRADAS */
+.entradas {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    background: linear-gradient(120deg, #251346, #51268b, #24123d);
+}
+
+.entrada-contenido h2 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.entrada-contenido > p:not(.subtitulo):not(.aclaracion) {
+    color: #ddd4ed;
+    margin-bottom: 30px;
+}
+
+.aclaracion {
+    font-size: 11px;
+    color: #c1b4d6;
+    margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+    padding-top: 35px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #080710;
+}
+
+footer p {
+    color: #aaa4bb;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #d8d2e8;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #a987ff;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #302b3c;
+    padding-top: 20px;
+}
+
+/* ANIMACION */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ADAPTACION A CELULARES */
+@media (max-width: 768px) {
+    .padding-lados {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 70px 7%;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .evento,
+    .artistas,
+    .entradas {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .entrada-contenido h2 {
+        font-size: 36px;
+    }
+
+    footer {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+
+
