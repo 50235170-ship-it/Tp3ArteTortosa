@@ -1,5 +1,5 @@
 
-/*GENERAL */
+/* GENERAL */
 * {
     margin: 0;
     padding: 0;
@@ -63,6 +63,10 @@ header {
     border: 1px solid #77796b;
 }
 
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
 .nav-link {
     color: #eeeeea;
     margin-left: 18px;
@@ -76,7 +80,7 @@ header {
     background-color: #41423b;
 }
 
-/*PRINCIPAL */
+/* PRINCIPAL */
 .hero {
     min-height: 560px;
     display: flex;
@@ -225,7 +229,21 @@ header {
     url("https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=700&q=80");
 }
 
-/*ENTRADAS */
+/* CARRUSEL BOOTSTRAP */
+.carousel .imagen-artistas {
+    margin-top: 0;
+}
+
+.carousel {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+/* ENTRADAS */
 .entradas {
     padding-top: 85px;
     padding-bottom: 85px;
@@ -253,9 +271,10 @@ footer {
     padding-top: 35px;
     padding-bottom: 25px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    text-align: center;
     gap: 20px;
     background-color: #20211e;
 }
@@ -268,6 +287,7 @@ footer p {
 .footer-links {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -323,10 +343,23 @@ footer p {
 
     footer {
         justify-content: center;
+        align-items: center;
         text-align: center;
     }
 
     .footer-links {
         justify-content: center;
     }
+}
+
+/* ANIMACION AL BAJAR POR LA PAGINA */
+.animacion {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.animacion.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
